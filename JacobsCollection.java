@@ -3,7 +3,7 @@
  *  Intended to mimic {@code java.util.Collection}
  *  @author Jacob Walsh
  */
-
+import java.util.Iterator;
 interface JacobsCollection<junk> extends Iterable<junk>{
 
 	int size = 0;
@@ -69,8 +69,7 @@ interface JacobsCollection<junk> extends Iterable<junk>{
 	  *makes an iterator for the items in this collection
 	  * @return iterator
 	 */
-	Iterator<junk> itertor();
-
+	Iterator<junk> iterator();
 	/**
 	  *removes item from collection, if exists
 	  * @return boolean verfying object was removed
