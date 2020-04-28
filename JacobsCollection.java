@@ -27,13 +27,14 @@ interface JacobsCollection<junk> extends Iterable<junk>{
 	 *removes all items from collection
 	 */
 	void clear();
-
+ 
 	/**
 	 *checks if item is in collection
 	 * @param item, item being checked
 	 * @return boolean verifying item is contained
 	 */
 	boolean contains(junk item);
+	
 
 	 /**
 	  *checks if collection of items are in this collection
@@ -49,13 +50,45 @@ interface JacobsCollection<junk> extends Iterable<junk>{
 	 */
 	boolean equals(Object O);
 
-/**
+	/**
 	  *Computes and returns collections hash code
 	  * @return hash code of this collection
 	 */
 	int hashCode();
 
+
+	/**
+	  *Checks if collection is empty
+	  * @return boolean verifying collection is empty
+	 */
 	default boolean isEmpty(){
 			return size==0;
 	}
+
+	/**
+	  *makes an iterator for the items in this collection
+	  * @return iterator
+	 */
+	Iterator<junk> itertor();
+
+	/**
+	  *removes item from collection, if exists
+	  * @return boolean verfying object was removed
+	  */
+	boolean remove(Object O);
+
+	/**
+	  * @return size of collection
+	 */
+	default int size(){
+		return size;
+	}
+
+		/**
+	  *turns collection to an array
+	  	@param array type to be returned
+	  * @return items in an array
+	 */
+	<item> item[] toArray(item[] a);
 }
+
