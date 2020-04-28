@@ -6,22 +6,19 @@
 import java.util.Iterator;
 interface JacobsCollection<junk> extends Iterable<junk>{
 
-	int size = 0;
-
 	/**
-	 *adds item to collection
+	 * adds item to collection
 	 * @param item, generic item to add
 	 * @return boolean verifying item was added
 	 */
 	boolean add(junk item);
 
 	/**
-	 *adds collection of items to this collection
+	 * adds collection of items to this collection
 	 * @param items, collection of items to add
 	 * @return boolean verifying items were added
 	 */
 	boolean addAll(JacobsCollection<? extends junk> items);
-
 
 	/**
 	 *removes all items from collection
@@ -29,12 +26,11 @@ interface JacobsCollection<junk> extends Iterable<junk>{
 	void clear();
  
 	/**
-	 *checks if item is in collection
+	 * checks if item is in collection
 	 * @param item, item being checked
 	 * @return boolean verifying item is contained
 	 */
 	boolean contains(junk item);
-	
 
 	 /**
 	  *checks if collection of items are in this collection
@@ -61,33 +57,29 @@ interface JacobsCollection<junk> extends Iterable<junk>{
 	  *Checks if collection is empty
 	  * @return boolean verifying collection is empty
 	 */
-	default boolean isEmpty(){
-			return size==0;
-	}
+	boolean isEmpty();
 
 	/**
 	  *makes an iterator for the items in this collection
 	  * @return iterator
 	 */
 	Iterator<junk> iterator();
+
 	/**
 	  *removes item from collection, if exists
-	  * @return boolean verfying object was removed
+	  * @return boolean verifying object was removed
 	  */
 	boolean remove(Object O);
 
 	/**
 	  * @return size of collection
 	 */
-	default int size(){
-		return size;
-	}
+	int size();
 
 		/**
 	  *turns collection to an array
-	  	@param array type to be returned
-	  * @return items in an array
+	  *@param a, array type to be returned
+	  *@return items in an array
 	 */
 	<item> item[] toArray(item[] a);
 }
-
