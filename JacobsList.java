@@ -101,7 +101,7 @@ interface JacobsList<junk> extends JacobsCollection<junk> {
      *removes first occurrence of item in list, if exists
      * @return boolean verifying object was removed
      */
-    boolean remove(Object O);
+    boolean remove(junk item);
 
     /**
      *removes item at specified index from list

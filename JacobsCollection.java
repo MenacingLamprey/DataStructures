@@ -69,7 +69,7 @@ interface JacobsCollection<junk> extends Iterable<junk>{
 	  *removes item from collection, if exists
 	  * @return boolean verifying object was removed
 	  */
-	boolean remove(Object O);
+	boolean remove(junk item);
 
 	/**
 	  * @return size of collection
